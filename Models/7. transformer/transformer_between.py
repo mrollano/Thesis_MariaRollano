@@ -1,4 +1,4 @@
-"""
+""" 
 ViT Between-Subject Classification – One Characteristic
 -------------------------------------------------------
 This script trains and evaluates a Vision Transformer (ViT) model
