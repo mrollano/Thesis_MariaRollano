@@ -1,4 +1,4 @@
-"""
+"""   
 This script trains a Compact Convolutional Neural Network (CCNN) in a between-subject setting,
 using a single EEG characteristic per electrode (i.e., 4 input channels).
 
