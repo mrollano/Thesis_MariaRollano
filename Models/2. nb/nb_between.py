@@ -1,4 +1,4 @@
-"""
+""" 
 Naive Bayes (Between-Subject Evaluation)
 
 This script trains and evaluates a Gaussian Naive Bayes classifier using 
