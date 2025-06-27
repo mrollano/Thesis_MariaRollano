@@ -1,10 +1,10 @@
 """
-Trial-wise Train/Test Split for Grid-Based EEG Features (CNN, ViT)
+Trial-wise Train/Test Split for Grid-Based EEG Features (Single Feature - CNN, ViT)
 
 This script performs a trial-wise train/test split for EEG data that has been spatially
 transformed into 2D grids using `ToGrid`. Each subject has 1800 1-second segments, each
-transformed into a (24, 9, 9) grid. These are grouped into 30 trials of 60 grids each
-(i.e., 60 time slices per trial).
+transformed into a (4, 9, 9) grid — corresponding to a single feature across 4 frequency bands.
+These are grouped into 30 trials of 60 grids each (i.e., 60 time slices per trial).
 
 The split is performed at the **trial level**, ensuring that all slices from a given
 trial are assigned to the same set (train or test). This prevents data leakage and 
@@ -15,11 +15,11 @@ This approach is suitable for deep learning models that operate on spatial repre
 - Vision Transformers (ViT)
 
 Input:
-- all_data_grid.pkl → shape (1800, 24, 9, 9)
+- all_data_grid.pkl → shape (1800, 4, 9, 9)
 
 Output:
 - train_test_split_trial_wise_grid.pkl per subject, containing:
-    - X_train, X_test: (n_slices, 24, 9, 9)
+    - X_train, X_test: (n_slices, 4, 9, 9)
     - y_train, y_test: (n_slices,)
 """
 
@@ -28,7 +28,7 @@ import joblib
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-# Input directory: EEG data with grid-based features
+# Input directory: EEG data with grid-based features (single feature)
 input_dir = "Data/Splits/toGrid_transforms/one_characteristic"
 
 # Output directory for trial-wise splits
@@ -52,7 +52,7 @@ for subject in subjects:
         print(f"  Skipped: {input_pkl} not found.")
         continue
 
-    # Load data: X (1800, 24, 9, 9), y (1800,)
+    # Load data: X (1800, 4, 9, 9), y (1800,)
     X_all, y_all = joblib.load(input_pkl)
     X_all = np.array(X_all)
     y_all = np.array(y_all)
