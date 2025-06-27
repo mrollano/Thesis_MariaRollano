@@ -1,4 +1,4 @@
-"""
+"""  
 CCNN Model - Within-Subject Evaluation (One Characteristic)
 
 This script trains a Compact Convolutional Neural Network (CCNN) from the TorchEEG library for within-subject classification.
