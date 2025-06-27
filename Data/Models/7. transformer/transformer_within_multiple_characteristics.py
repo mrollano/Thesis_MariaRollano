@@ -1,3 +1,17 @@
+"""
+ViT Within-Subject Classification – Multiple Characteristics
+------------------------------------------------------------
+This script trains and evaluates a Vision Transformer (ViT) model 
+for within-subject EEG emotion classification using multiple EEG features 
+(e.g., PSD, DE, etc.) organized in 24-channel grid format.
+
+Approach:       "3" or "4" (slice-wise or trial-wise)
+Model:          ViT (depth=6, heads=9, hid_channels=128, dropout=0.2)
+Input shape:    EEG grid tensors with chunk_size=24
+Evaluation:     Accuracy and F1 score per subject
+Output:         Trained models + metrics stored under /Results/...
+"""
+
 import os
 import sys
 import random
