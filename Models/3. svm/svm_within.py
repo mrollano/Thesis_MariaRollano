@@ -1,4 +1,4 @@
-"""
+""" 
 Support Vector Machine (Within-Subject Evaluation)
 
 This script trains and evaluates an SVM classifier for within-subject classification 
