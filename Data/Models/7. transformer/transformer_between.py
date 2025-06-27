@@ -1,3 +1,17 @@
+"""
+ViT Between-Subject Classification – One Characteristic
+-------------------------------------------------------
+This script trains and evaluates a Vision Transformer (ViT) model
+using a leave-one-subject-out (LOSO) cross-validation strategy.
+It is designed for between-subject classification using a single EEG characteristic.
+
+Data input:      Grid-based EEG tensors (chunk_size=4)
+Model:           ViT (depth=6, heads=9, hid_channels=128, dropout=0.2)
+Evaluation:      Accuracy and F1 score
+Approach key:    "5" – between, one characteristic
+Output:          Trained models + metrics per subject in /Results/2. between_subject/a. one characteristic/7. transformer
+"""
+
 import os
 import sys
 import random
