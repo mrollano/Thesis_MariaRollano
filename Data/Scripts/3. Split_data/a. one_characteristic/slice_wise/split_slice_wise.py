@@ -1,14 +1,23 @@
 """
-Slice-wise Train/Test Split for One-Characteristic EEG Features
+Slice-wise Train/Test Split for One-Characteristic EEG Features (KNN, SVM, NB, RF, XGBoost)
 
 This script performs a slice-wise data split: each 1-second EEG segment (previously transformed) 
 is considered independently. For each subject, segments are shuffled and split into train/test 
 sets using sklearn's `train_test_split`, preserving label distribution (stratification).
 
-- Input: all_data.pkl (1800 segments per subject)
+This version is specifically intended for use with classical machine learning models that operate 
+on flattened feature vectors:
+- K-Nearest Neighbors (KNN)
+- Support Vector Machines (SVM)
+- Naive Bayes (NB)
+- Random Forest (RF)
+- XGBoost
+
+- Input: all_data.pkl (1800 segments per subject, each as a flat feature vector)
 - Output: train_test_split.pkl per subject with (X_train, X_test, y_train, y_test)
 
-This strategy ignores the temporal grouping of slices into trials and assumes each segment is independent.
+Note: This strategy ignores the temporal grouping of slices into trials and assumes 
+each segment is independent.
 """
 
 import os
