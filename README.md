@@ -6,7 +6,8 @@ This project is part of a Master's Thesis conducted by **María Rollano Corroto*
 
 > **"Trust Recognition in Human-Robot Cooperation Using EEG"**  
 > Caiyue Xu, Changming Zhang, Yanmin Zhou, Zhipeng Wang, Ping Lu, Bin He  
-> [Available at: https://doi.org/10.1109/TNSRE.2021.3099246](https://doi.org/10.1109/TNSRE.2021.3099246)
+> [arXiv:2403.05225](https://doi.org/10.48550/arXiv.2403.05225)
+
 
 The main objective of this thesis is to infer trust levels using electroencephalography (EEG) signals combined with artificial intelligence (AI) models in a human-robot cooperation task. 
 
