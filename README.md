@@ -8,12 +8,9 @@ This project is part of a Master's Thesis conducted by **María Rollano Corroto*
 > Caiyue Xu, Changming Zhang, Yanmin Zhou, Zhipeng Wang, Ping Lu, Bin He  
 > [arXiv:2403.05225](https://doi.org/10.48550/arXiv.2403.05225)
 
+The main objective of this thesis is to infer trust levels using electroencephalography (EEG) signals combined with artificial intelligence (AI) models in a human-robot cooperation task, using the publicly available EEGTrust dataset provided by the original authors.
 
-The main objective of this thesis is to infer trust levels using electroencephalography (EEG) signals combined with artificial intelligence (AI) models in a human-robot cooperation task. 
-
-This work replicates the experimental framework proposed by Xu et al., using their publicly available EEGTrust dataset and preprocessing pipeline.
-
-Beyond replication, it proposes six systematic experimental approaches that vary the validation mode, number of input features, and temporal segmentation strategy. Each configuration serves as a distinct pipeline on which a consistent set of models is trained and evaluated:
+To that end, we replicate the reference study, following the same methodology, dataset, and experimental pipeline. Furthermore, we extend their work by proposing six systematic experimental approaches that vary the validation mode, number of input features, and data segmentation strategy. Each configuration serves as a distinct pipeline on which a consistent set of models is trained and evaluated:
 
 - K-Nearest Neighbors (KNN)
 - Support Vector Machine (SVM)
@@ -123,7 +120,6 @@ Although each script includes a docstring describing its purpose and functionali
       - `transformer_within_multiple_characteristics.py`  
       - `transformer_between.py`  
       - `transformer_between_multiple_characteristics.py`
-
 ---
 
 ## Requirements
